@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "260846165926",
+    "project_id": "inkflowai",
+    "storage_bucket": "inkflowai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260846165926:android:ccdf5f4d5e7433754d7967",
+        "android_client_info": {
+          "package_name": "com.inkflowai.inkflowai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260846165926-q4msori8a68ah66vhqlv5omvrmmacodk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0GdQJOPn3Aq6geSvrtEDC9a3D7HUCDSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260846165926-q4msori8a68ah66vhqlv5omvrmmacodk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
