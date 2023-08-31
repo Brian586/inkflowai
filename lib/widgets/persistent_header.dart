@@ -14,12 +14,16 @@ class PersistentHeader extends SliverPersistentHeaderDelegate {
 
     return Stack(
       children: [
-        Image.asset(
-          "assets/images/main_background.png",
+        SizedBox(
           height: size.height * 0.4,
           width: size.width,
-          fit: BoxFit.contain,
         ),
+        // Image.asset(
+        //   "assets/images/main_background.png",
+        //   height: size.height * 0.4,
+        //   width: size.width,
+        //   fit: BoxFit.contain,
+        // ),
         const Positioned.fill(
           child: Center(
             child: Text(

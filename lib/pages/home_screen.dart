@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:inkflowai/models/activity.dart';
 import 'package:inkflowai/widgets/activity_widget.dart';
 import 'package:inkflowai/widgets/custom_appbar.dart';
+import 'package:inkflowai/widgets/custom_drawer.dart';
 import 'package:inkflowai/widgets/persistent_header.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,15 +18,18 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey<ScaffoldState> globalKey = GlobalKey();
 
   Widget _buildBody() {
-    return GridView.count(
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: 2,
-      shrinkWrap: true,
-      children: List.generate(activities.length, (index) {
-        Activity activity = activities[index];
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+      child: GridView.count(
+        physics: const NeverScrollableScrollPhysics(),
+        crossAxisCount: 2,
+        shrinkWrap: true,
+        children: List.generate(activities.length, (index) {
+          Activity activity = activities[index];
 
-        return ActivityWidget(activity: activity);
-      }),
+          return ActivityWidget(activity: activity);
+        }),
+      ),
     );
   }
 
@@ -34,11 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      drawer: Drawer(),
+      drawer: CustomDrawer(user: widget.user!),
       key: globalKey,
       appBar: PreferredSize(
         preferredSize: Size(size.width, kToolbarHeight),
-        child: CustomAppbar(
+        child: CustomMainAppbar(
           user: widget.user,
           globalKey: globalKey,
         ),

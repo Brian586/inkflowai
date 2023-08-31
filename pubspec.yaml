@@ -40,6 +40,7 @@ dependencies:
   flutterfire_ui: ^0.4.3+20
   animated_text_kit: ^4.2.2
   google_fonts: ^5.1.0
+  responsive_builder: ^0.7.0
 
 dev_dependencies:
   flutter_test:

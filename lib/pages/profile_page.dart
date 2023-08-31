@@ -9,19 +9,17 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ProfileScreen(
       appBar: AppBar(
         title: Text("Profile"),
       ),
-      body: ProfileScreen(
-        providerConfigs: providerConfigs,
-        actions: [
-          SignedOutAction((context) {
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const SplashScreen()));
-          }),
-        ],
-      ),
+      providerConfigs: providerConfigs,
+      actions: [
+        SignedOutAction((context) {
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => const SplashScreen()));
+        }),
+      ],
     );
   }
 }
