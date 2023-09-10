@@ -14,7 +14,8 @@ class ActivityWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5.0),
       child: InkWell(
-        onTap: () => onButtonTapped(context, activity.activityID!),
+        onTap: () =>
+            onButtonTapped(context, activity.activityID!, activity.activityID!),
         child: SizedBox(
           width: size.width * 0.5,
           height: size.width * 0.5,

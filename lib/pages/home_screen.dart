@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:inkflowai/models/activity.dart';
 import 'package:inkflowai/widgets/activity_widget.dart';
 import 'package:inkflowai/widgets/custom_appbar.dart';
+import 'package:inkflowai/widgets/custom_carousel.dart';
 import 'package:inkflowai/widgets/custom_drawer.dart';
-import 'package:inkflowai/widgets/persistent_header.dart';
 
 class HomeScreen extends StatefulWidget {
   final User? user;
@@ -47,16 +47,39 @@ class _HomeScreenState extends State<HomeScreen> {
           globalKey: globalKey,
         ),
       ),
-      body: CustomScrollView(
+      body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
-        slivers: [
-          SliverPersistentHeader(
-              pinned: false, delegate: PersistentHeader(ctx: context)),
-          SliverToBoxAdapter(
-            child: _buildBody(),
-          )
-        ],
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const CustomCarousel(),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Explore",
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge!
+                      .apply(fontWeightDelta: 3),
+                ),
+              ),
+            ),
+            _buildBody()
+          ],
+        ),
       ),
+      // body: CustomScrollView(
+      //   physics: const BouncingScrollPhysics(),
+      //   slivers: [
+      //     SliverPersistentHeader(
+      //         pinned: false, delegate: PersistentHeader(ctx: context)),
+      //     SliverToBoxAdapter(
+      //       child: _buildBody(),
+      //     )
+      //   ],
+      // ),
     );
   }
 }

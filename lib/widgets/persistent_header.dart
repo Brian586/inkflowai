@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inkflowai/widgets/custom_carousel.dart';
 
 class PersistentHeader extends SliverPersistentHeaderDelegate {
   final BuildContext ctx;
@@ -10,37 +11,22 @@ class PersistentHeader extends SliverPersistentHeaderDelegate {
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    Size size = MediaQuery.of(context).size;
-
-    return Stack(
+    return Column(
       children: [
-        SizedBox(
-          height: size.height * 0.4,
-          width: size.width,
+        const Expanded(
+          child: CustomCarousel(),
         ),
-        // Image.asset(
-        //   "assets/images/main_background.png",
-        //   height: size.height * 0.4,
-        //   width: size.width,
-        //   fit: BoxFit.contain,
-        // ),
-        const Positioned.fill(
-          child: Center(
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: Align(
+            alignment: Alignment.centerLeft,
             child: Text(
-              "Hello 👋",
-              style: TextStyle(fontSize: 18.0, color: Colors.grey),
+              "Explore",
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge!
+                  .apply(fontWeightDelta: 3),
             ),
-          ),
-        ),
-        Positioned(
-          bottom: 10.0,
-          left: 20.0,
-          child: Text(
-            "Explore",
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .apply(fontWeightDelta: 3),
           ),
         )
       ],

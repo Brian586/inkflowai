@@ -1,4 +1,4 @@
-package com.inkflowai.inkflowai;
+package com.inkflowai;
 
 import io.flutter.embedding.android.FlutterActivity;
 

@@ -28,10 +28,7 @@ class AdaptiveUI extends StatelessWidget {
             ),
           )
         : BodyWrapper(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              child: body,
-            ),
+            child: body,
           );
   }
 

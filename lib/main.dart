@@ -7,12 +7,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:inkflowai/config.dart';
 import 'package:inkflowai/firebase_options.dart';
 import 'package:inkflowai/pages/auth/auth_gate.dart';
+import 'package:camera/camera.dart';
+
+late List<CameraDescription> cameras;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  cameras = await availableCameras();
 
   runApp(const MyApp());
 }
