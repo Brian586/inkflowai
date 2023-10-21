@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:inkflowai/widgets/adaptive_ui.dart';
 import 'package:inkflowai/widgets/camera_button.dart';
-import 'package:tflite/tflite.dart';
+// import 'package:tflite/tflite.dart';
 import 'dart:math' as math;
 
 import '../../main.dart';
@@ -26,39 +26,39 @@ class _CharactersScreenState extends State<CharactersScreen> {
   int _imageHeight = 0;
   int _imageWidth = 0;
 
-  @override
-  void initState() {
-    super.initState();
+  // @override
+  // void initState() {
+  //   super.initState();
 
-    loading = true;
+  //   loading = true;
 
-    loadModel().then((val) {
-      setState(() {
-        loading = false;
-      });
-    });
-  }
+  //   loadModel().then((val) {
+  //     setState(() {
+  //       loading = false;
+  //     });
+  //   });
+  // }
 
-  Future loadModel() async {
-    Tflite.close();
-    try {
-      Activity activity = activities
-          .where((act) => act.activityID == widget.activityID)
-          .toList()
-          .first;
+  // Future loadModel() async {
+  //   Tflite.close();
+  //   try {
+  //     Activity activity = activities
+  //         .where((act) => act.activityID == widget.activityID)
+  //         .toList()
+  //         .first;
 
-      String? res = await Tflite.loadModel(
-        model: activity.model!,
-        labels: activity.labels!,
-      );
+  //     String? res = await Tflite.loadModel(
+  //       model: activity.model!,
+  //       labels: activity.labels!,
+  //     );
 
-      print("====================");
+  //     print("====================");
 
-      print(res);
-    } on PlatformException {
-      print('Failed to load model.');
-    }
-  }
+  //     print(res);
+  //   } on PlatformException {
+  //     print('Failed to load model.');
+  //   }
+  // }
 
   setRecognitions(recognitions, imageHeight, imageWidth) {
     setState(() {

@@ -14,6 +14,9 @@ import 'pages/settings_page.dart';
 
 void onButtonTapped(BuildContext context, String pageID, String activityID) {
   switch (pageID) {
+    case "home":
+      Navigator.pop(context);
+      break;
     case "profile":
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => const ProfilePage()));

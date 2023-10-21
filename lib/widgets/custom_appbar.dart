@@ -15,8 +15,10 @@ class CustomMainAppbar extends StatelessWidget {
       automaticallyImplyLeading: false,
       title: Text(
         "InkFlow AI",
-        style: Config.appNameTextStyle
-            .copyWith(color: Theme.of(context).primaryColor),
+        style: Config.appNameTextStyle.copyWith(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? Colors.white
+                : Theme.of(context).primaryColor),
       ),
       actions: [
         InkWell(

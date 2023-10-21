@@ -1,0 +1,29 @@
+1
+circle
+complete line
+complete-circle
+complete-line
+cresent
+diamond
+dotted circle
+dotted lines
+dotted-circle
+dotted-diamond
+dotted-heart
+dotted-line
+dotted-pentagon
+dotted-rectangle
+dotted-square
+dotted-star
+dotted-triangle
+hand
+heart
+hexagon
+papper
+pentagon
+polygon
+rectangle
+road out
+square
+star
+triangle

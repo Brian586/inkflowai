@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:inkflowai/models/activity.dart';
+import 'package:inkflowai/open_cv/test.dart';
 import 'package:inkflowai/widgets/activity_widget.dart';
 import 'package:inkflowai/widgets/custom_appbar.dart';
 import 'package:inkflowai/widgets/custom_carousel.dart';
@@ -66,7 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            _buildBody()
+            _buildBody(),
+            const TestOpenCV()
           ],
         ),
       ),

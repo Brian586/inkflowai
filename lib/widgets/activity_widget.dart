@@ -32,8 +32,8 @@ class ActivityWidget extends StatelessWidget {
                 children: [
                   Image.asset(
                     "assets/images/${activity.image}.png",
-                    height: 50.0,
-                    width: 50.0,
+                    height: 45.0,
+                    width: 45.0,
                     fit: BoxFit.contain,
                   ),
                   Expanded(

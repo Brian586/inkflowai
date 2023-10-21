@@ -23,7 +23,7 @@ class CustomDrawer extends StatelessWidget {
                   backgroundImage:
                       const AssetImage("assets/images/profile.png"),
                   backgroundColor: Colors.grey.shade100,
-                  radius: 40.0,
+                  radius: 30.0,
                   foregroundImage: user.photoURL == null
                       ? null
                       : NetworkImage(user.photoURL!),

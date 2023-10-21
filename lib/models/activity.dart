@@ -19,16 +19,13 @@ class Activity {
       this.labels});
 }
 
-String lipsumDesc =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s";
-
 final List<Activity> activities = [
   Activity(
     activityID: "mosaic",
     title: "Mosaic",
     image: "mosaic",
-    model: "assets/models/yolov2_tiny.tflite",
-    labels: "assets/models/yolov2_tiny.txt",
+    model: "assets/models/best.tflite",
+    labels: "",
     rgbColor: [241, 89, 42],
     cardImage: "mosaic_art.jpg",
     description:
@@ -38,11 +35,13 @@ final List<Activity> activities = [
     activityID: "stroke",
     title: "Stroke",
     image: "polyline",
-    model: "",
-    labels: "",
+    model: "https://khaledkhlyan.github.io/ShapesDetection/",
+    // "https://demo.roboflow.com/shapes-recognition/4?publishable_key=rf_TV1AXOV0jBYt02DPg0stwRyqeY13",
+    labels: "assets/models/labels.txt",
     cardImage: "stroke.jpg",
     rgbColor: [146, 39, 143],
-    description: lipsumDesc,
+    description:
+        "Draw freehand strokes following a precise path and without going outside the limits.",
   ),
   Activity(
     activityID: "difference",
@@ -52,27 +51,30 @@ final List<Activity> activities = [
     labels: "",
     cardImage: "difference.jpg",
     rgbColor: [0, 167, 157],
-    description: lipsumDesc,
+    description: "Spot the difference between two identical photos.",
   ),
   Activity(
     activityID: "paint",
     title: "Colour Images",
     image: "paint",
-    model: "",
+    model: "https://khaledkhlyan.github.io/ShapesDetection/",
+    // "https://demo.roboflow.com/shapes-recognition/4?publishable_key=rf_TV1AXOV0jBYt02DPg0stwRyqeY13",
     labels: "",
     cardImage: "color.png",
     rgbColor: [0, 166, 81],
-    description: lipsumDesc,
+    description:
+        "Colour images as the app detects the type of colour used in real time and percentage completion.",
   ),
   Activity(
     activityID: "pick",
     title: "Pick Object",
     image: "pick",
-    model: "",
+    model: "my model",
     labels: "",
     cardImage: "pick.jpg",
     rgbColor: [218, 28, 92],
-    description: lipsumDesc,
+    description:
+        "Pick an object among many and let the app recognize the chosen object in real time.",
   ),
   Activity(
     activityID: "match",
@@ -99,7 +101,7 @@ final List<Activity> activities = [
     activityID: "characters",
     title: "Characters",
     image: "characters",
-    model: "assets/models/text_recognition.tflite",
+    model: "",
     labels: "",
     cardImage: "characters.png",
     rgbColor: [96, 57, 19],
